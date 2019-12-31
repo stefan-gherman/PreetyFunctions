@@ -19,6 +19,7 @@ def the_price_of_beauty(num):
     else:
         flag2 = False
         flag3 = False
+        magnitude = 0
         while inner_num > 0:
             if inner_num > 99 and inner_num < 1000:
                 third_dig = inner_num % 10
@@ -36,9 +37,9 @@ def the_price_of_beauty(num):
                 for elem in range(len(suffixes[key])):
                     if number_of_digs == suffixes[key][elem]:
                         pos = elem
-                        break
-            # else:
-            #     return f"This number breaks the space-time continuum"
+
+        if magnitude == 0:
+            return f"This number breaks the space-time continuum"
         if pos == 2:
             return f'{first_dig}{second_dig}{third_dig}{magnitude}'
         elif pos == 1:
