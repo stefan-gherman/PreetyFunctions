@@ -54,6 +54,3 @@ def the_price_of_beauty(num):
                     return f'{first_dig}.{second_dig}{magnitude}'
                 else:
                     return f'{first_dig}{magnitude}'
-
-
-print(the_price_of_beauty(102356))
