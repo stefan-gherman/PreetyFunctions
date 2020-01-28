@@ -49,11 +49,11 @@ def the_price_of_beauty(num):
         elif pos == 1:
             if flag3 == True:
                 result = f'{first_dig}{second_dig}.{third_dig}{magnitude}'
-            result = f'{first_dig}{second_dig}{magnitude}'
+            else:
+                result = f'{first_dig}{second_dig}{magnitude}'
         elif pos == 0:
             if flag3 == True:
                 result = f'{first_dig}.{second_dig}{third_dig}{magnitude}'
-
             else:
                 if flag2 == True:
                     result = f'{first_dig}.{second_dig}{magnitude}'
@@ -65,4 +65,4 @@ def the_price_of_beauty(num):
 
 
 print(the_price_of_beauty(-53163))
-print(the_price_of_beauty(42342432))
+print(the_price_of_beauty(42534))
