@@ -20,8 +20,11 @@ def the_price_of_beauty(num):
         flag2 = False
         flag3 = False
         magnitude = 0
+        if inner_num < 0:
+            flag_sign = True
+            inner_num = abs(inner_num)
         while inner_num > 0:
-            if inner_num > 99 and inner_num < 1000:
+            if (inner_num > 99 and inner_num < 1000):
                 third_dig = inner_num % 10
                 if third_dig:
                     flag3 = True
@@ -41,17 +44,23 @@ def the_price_of_beauty(num):
         if magnitude == 0:
             return f"This number breaks the space-time continuum"
         if pos == 2:
-            return f'{first_dig}{second_dig}{third_dig}{magnitude}'
+            result = f'{first_dig}{second_dig}{third_dig}{magnitude}'
         elif pos == 1:
             if flag3 == True:
-                return f'{first_dig}{second_dig}.{third_dig}{magnitude}'
-            return f'{first_dig}{second_dig}{magnitude}'
+                result = f'{first_dig}{second_dig}.{third_dig}{magnitude}'
+            result = f'{first_dig}{second_dig}{magnitude}'
         elif pos == 0:
             if flag3 == True:
-                return f'{first_dig}.{second_dig}{third_dig}{magnitude}'
+                result = f'{first_dig}.{second_dig}{third_dig}{magnitude}'
 
             else:
                 if flag2 == True:
-                    return f'{first_dig}.{second_dig}{magnitude}'
+                    result = f'{first_dig}.{second_dig}{magnitude}'
                 else:
-                    return f'{first_dig}{magnitude}'
+                    result = f'{first_dig}{magnitude}'
+        if flag_sign == True:
+            result = '-' + result
+        return result
+
+
+print(the_price_of_beauty(-530632))
