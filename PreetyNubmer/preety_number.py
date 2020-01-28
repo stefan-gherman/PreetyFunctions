@@ -62,7 +62,3 @@ def the_price_of_beauty(num):
         if flag_sign == True:
             result = '-' + result
         return result
-
-
-print(the_price_of_beauty(-53163))
-print(the_price_of_beauty(42534))
