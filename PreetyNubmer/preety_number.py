@@ -19,6 +19,7 @@ def the_price_of_beauty(num):
     else:
         flag2 = False
         flag3 = False
+        flag_sign = False
         magnitude = 0
         if inner_num < 0:
             flag_sign = True
@@ -63,4 +64,5 @@ def the_price_of_beauty(num):
         return result
 
 
-print(the_price_of_beauty(-530632))
+print(the_price_of_beauty(-53163))
+print(the_price_of_beauty(42342432))
